@@ -22,3 +22,15 @@ body {
     height: 20px;
     border: 1px solid black;
 }
+
+#ui-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+#range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
