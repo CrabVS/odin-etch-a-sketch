@@ -32,6 +32,11 @@ const clearGrid = function clearGrid() {
     gridContainerEl.innerHTML = '';
 }
 
+const resetGrid = function clearAndCreateGrid() {
+    clearGrid();
+    createGrid(getGridSize());
+}
+
 const updateCell = function updateCell(cell) {
     cell.style.backgroundColor = getColor()
 }
@@ -42,15 +47,13 @@ const initializeApp = function initializeApp() {
     const rangeLabelEl = document.querySelector('#range-container label');
 
     resetButtonEl.addEventListener('click', () => {
-        clearGrid();
-        createGrid(getGridSize());
+        resetGrid();
     })
 
     rangeEl.addEventListener('change', () => {
         const gridSize = getGridSize();
 
-        clearGrid();
-        createGrid(getGridSize());
+        resetGrid();
         rangeLabelEl.textContent = `${gridSize}x${gridSize}`;
     })
 
