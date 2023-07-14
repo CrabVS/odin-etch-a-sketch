@@ -37,6 +37,23 @@ const updateCell = function updateCell(cell) {
 }
 
 const initializeApp = function initializeApp() {
+    const resetButtonEl = document.getElementById('reset-button');
+    const rangeEl = document.getElementById('myRange');
+    const rangeLabelEl = document.querySelector('#range-container label');
+
+    resetButtonEl.addEventListener('click', () => {
+        clearGrid();
+        createGrid(getGridSize());
+    })
+
+    rangeEl.addEventListener('change', () => {
+        const gridSize = getGridSize();
+
+        clearGrid();
+        createGrid(getGridSize());
+        rangeLabelEl.textContent = `${gridSize}x${gridSize}`;
+    })
+
     createGrid(getGridSize());
 }
 
