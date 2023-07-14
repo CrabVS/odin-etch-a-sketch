@@ -12,7 +12,6 @@ const getGridSize = function getSelectedGridSize() {
 
 const createGrid = function createGrid(gridSize) {
     const gridContainerEl = document.getElementById('grid-container');
-    gridContainerEl.innerHTML = '';
 
     for (let index = 0; index < gridSize; index++) {
         let newRow = document.createElement('div');
@@ -26,6 +25,11 @@ const createGrid = function createGrid(gridSize) {
 
         gridContainerEl.appendChild(newRow);
     }
+}
+
+const clearGrid = function clearGrid() {
+    const gridContainerEl = document.getElementById('grid-container');
+    gridContainerEl.innerHTML = '';
 }
 
 const updateCell = function updateCell(cell) {
