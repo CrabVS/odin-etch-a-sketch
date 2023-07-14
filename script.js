@@ -1,5 +1,7 @@
 const getColor = function getSelectedColorBrush() {
-    return '#ff0000';
+    const colorEl = document.getElementById('favcolor');
+
+    return colorEl.value;
 }
 
 const createGrid = function createGrid(gridSize) {
