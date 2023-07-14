@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container {
+    border: 1px solid black;
+}
+
+.grid-row {
+    display: flex;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
