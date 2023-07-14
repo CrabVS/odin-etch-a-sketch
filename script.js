@@ -1,3 +1,7 @@
+const getColor = function getSelectedColorBrush() {
+    return '#ff0000';
+}
+
 const createGrid = function createGrid(gridSize) {
     const gridContainerEl = document.getElementById('grid-container');
     gridContainerEl.innerHTML = '';
@@ -9,7 +13,7 @@ const createGrid = function createGrid(gridSize) {
             let newCell = document.createElement('div');
             newCell.classList.add('cell');
             newRow.appendChild(newCell);
-            addEventListener('mouseover', (newCell) => updateCell);
+            newCell.addEventListener('mouseover', () => updateCell(newCell));
         }
 
         gridContainerEl.appendChild(newRow);
@@ -17,7 +21,7 @@ const createGrid = function createGrid(gridSize) {
 }
 
 const updateCell = function updateCell(cell) {
-    console.log('update!');
+    cell.style.backgroundColor = getColor()
 }
 
 createGrid(16);
