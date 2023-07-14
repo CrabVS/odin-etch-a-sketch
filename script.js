@@ -9,10 +9,15 @@ const createGrid = function createGrid(gridSize) {
             let newCell = document.createElement('div');
             newCell.classList.add('cell');
             newRow.appendChild(newCell);
+            addEventListener('mouseover', (newCell) => updateCell);
         }
 
         gridContainerEl.appendChild(newRow);
     }
+}
+
+const updateCell = function updateCell(cell) {
+    console.log('update!');
 }
 
 createGrid(16);
