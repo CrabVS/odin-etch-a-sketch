@@ -4,6 +4,12 @@ const getColor = function getSelectedColorBrush() {
     return colorEl.value;
 }
 
+const getGridSize = function getSelectedGridSize() {
+    const rangeEl = document.getElementById('myRange');
+    
+    return rangeEl.value;
+}
+
 const createGrid = function createGrid(gridSize) {
     const gridContainerEl = document.getElementById('grid-container');
     gridContainerEl.innerHTML = '';
@@ -27,7 +33,7 @@ const updateCell = function updateCell(cell) {
 }
 
 const initializeApp = function initializeApp() {
-    createGrid(16);
+    createGrid(getGridSize());
 }
 
 initializeApp();
