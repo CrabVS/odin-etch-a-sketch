@@ -11,15 +11,19 @@ body {
 
 #grid-container {
     border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-row {
     display: flex;
+    flex: 1;
 }
 
 .cell {
-    width: 20px;
-    height: 20px;
+    flex: 1;
     border: 1px solid black;
 }
 
