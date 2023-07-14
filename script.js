@@ -26,4 +26,8 @@ const updateCell = function updateCell(cell) {
     cell.style.backgroundColor = getColor()
 }
 
-createGrid(16);
+const initializeApp = function initializeApp() {
+    createGrid(16);
+}
+
+initializeApp();
